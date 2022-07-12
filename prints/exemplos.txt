@@ -1,0 +1,17 @@
+Exemplificação dos testes realizados:
+
+Teste unitário:
+
+	print_1: em test_models.py foi criado o test unittest que testa se o cliente possui 20 anos. No primeiro caso o cliente leticia possui 20 anos por isso passa no teste unitário, no segundo caso o cliente hina tem 19 anos, por isso o teste resulta em erro.
+	
+	print_2: resultado no terminal do ClienteTestCase do print_1.
+	
+Passo-á-passo:
+	
+	Criada a classe ClienteTestCase, a função setUp cria no banco temporário dois clientes fictícios(leticia, hina), enquanto na função test_idade_true se retorna os dados dos clientes e se compara a idade no resgistro com a idade requerida(20 anos).
+	
+Teste de contraste:
+
+	print_3: foi realizado um teste de contraste com o auxílio do site: https://www.joedolson.com/tools/color-contrast-tester.php?pass=true&color=%233EA2CA&granularity=40 , onde foir feita a compatibilidade das cores usadas no template.
+	
+	print_4: template feito.

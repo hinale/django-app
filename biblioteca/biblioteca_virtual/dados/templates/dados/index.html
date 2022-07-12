@@ -1,0 +1,104 @@
+<DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Biblioteca virtual</title>
+
+    <style>
+      :root {
+        --blue: #3EA2CA;
+        --medium-blue: #000050;
+        --dark-blue: #000028;
+        --black: #000000;
+      }
+
+      body {
+        font-family: "Trebuchet Ms", sans-serif;
+        background-color: var(--black);
+      }
+
+      .navbar {
+        display: block;
+        position: absolute;
+        background-color: var(--medium-blue);
+        top:0;
+        left:0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .tituloNavbar {
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--blue);
+      }
+
+      .footer {
+        display: block;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        bottom:0;
+        left:0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 5em 0;
+      }
+
+      .cliente {
+        display: block;
+        position: relative;
+        background-color: var(--dark-blue);
+        width: 20em;
+        margin: 6em 0;
+        border-radius: 0.8em;
+        padding: 1em;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: var(--blue);
+      }
+
+      .copyright {
+        position: absolute;
+        color: var(--blue);
+        font-size: 12px;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%);
+        text-align: center;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="navbar">
+      <h1 class="tituloNavbar">Dados dos clientes</h1>
+    </div>
+
+    <div class="cliente">
+        {% for cliente in clientes %}
+            <p>Nome: {{ cliente.nome }}</p>
+            <p>Idade: {{ cliente.idade }}</p>
+            <p>Email: {{ cliente.email }}</p>
+            <p>Telefone: {{ cliente.telefone }}</p>
+            <p>RG: {{ cliente.rg }}</p>
+            <p>CPF: {{ cliente.cpf }}</p>
+        {% endfor %}
+    </div>
+    
+    <div class="footer">
+      <div class="copyright">
+        <p>&copy; Copyright 2022 - Letícia Amaral de Lara</p>
+        <p>Construdelas - Python - WoMakersCode</p>
+      </div> 
+    </div>
+
+  </body>
+</html>
